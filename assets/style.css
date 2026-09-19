@@ -402,3 +402,25 @@ a{color:inherit;text-decoration:none}
   .hero-3d{background:#f0f0f0!important;color:#000!important;box-shadow:none}
   .section-card,.level-block,.lesson-item{box-shadow:none!important;break-inside:avoid}
 }
+/* أزرار Classroom و Meet */
+.btn-classroom{
+  background:linear-gradient(135deg,#1a73e8,#0d47a1);
+  color:#fff;border:none;padding:10px 18px;border-radius:10px;
+  font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;
+  box-shadow:0 3px 0 #0a3268, 0 4px 10px rgba(26,115,232,0.3);
+  transition:.15s;
+}
+.btn-classroom:hover{transform:translateY(-2px);box-shadow:0 5px 0 #0a3268, 0 8px 18px rgba(26,115,232,0.4)}
+.btn-classroom:active{transform:translateY(1px);box-shadow:0 1px 0 #0a3268}
+
+.btn-meet{
+  background:linear-gradient(135deg,#00897B,#004D40);
+  color:#fff;border:none;padding:10px 18px;border-radius:10px;
+  font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;
+  box-shadow:0 3px 0 #00251a, 0 4px 10px rgba(0,137,123,0.3);
+  transition:.15s;
+}
+.btn-meet:hover{transform:translateY(-2px);box-shadow:0 5px 0 #00251a, 0 8px 18px rgba(0,137,123,0.4)}
+.btn-meet:active{transform:translateY(1px);box-shadow:0 1px 0 #00251a}
+.btn-email{background:linear-gradient(135deg,#D44638,#B23124)}
+.fab-email{background:#D44638}

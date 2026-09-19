@@ -1,6 +1,7 @@
 /* ============ إعدادات ============ */
-const CLASSROOM_URL = 'https://classroom.google.com/';
-const DATA_URL = 'data/lessons.json';
+const CLASSROOM_URL = const CLASSROOM_URL = 'https://classroom.google.com/';
+const MEET_URL = 'https://meet.google.com/';
+const TEACHER_EMAIL = 'djanounemokhtar4560@gmail.com';';
 
 function $(id){ return document.getElementById(id); }
 function esc(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -279,19 +280,19 @@ function editLesson(i){
 
 function addMediaItem(data = {}){
   const div = document.createElement('div');
-  div.className = 'media-edit-item';
+  div.className = 'media-item';
   div.innerHTML = `
-    <button type="button" class="remove-item-btn" onclick="this.parentElement.remove()">✕ حذف</button>
+    <button type="button" class="btn-remove" style="float:left;margin-bottom:8px" onclick="this.parentElement.remove()">✕ حذف</button>
     <select class="m-type">
       <option value="image" ${data.type==='image'?'selected':''}>🖼️ صورة</option>
-      <option value="video" ${data.type==='video'?'selected':''}>🎬 فيديو</option>
       <option value="youtube" ${data.type==='youtube'?'selected':''}>▶️ YouTube</option>
+      <option value="video" ${data.type==='video'?'selected':''}>🎬 فيديو (ملف)</option>
       <option value="pdf" ${data.type==='pdf'?'selected':''}>📄 PDF</option>
     </select>
-    <input type="text" class="m-url" placeholder="رابط الملف" value="${esc(data.url||'')}">
-    <input type="text" class="m-caption" placeholder="وصف قصير" value="${esc(data.caption||'')}">
+    <input type="text" class="m-url" placeholder="الرابط أو تم رفع الملف تلقائياً" value="${esc(data.url||'')}">
+    <input type="text" class="m-caption" placeholder="وصف قصير للوثيقة" value="${esc(data.caption||'')}">
   `;
-  $('mediaList').appendChild(div);
+  document.getElementById('mediaList').appendChild(div);
 }
 
 function addQuizQuestion(data = {}){
@@ -392,4 +393,41 @@ function importJSON(e){
     }catch(err){ alert('❌ ملف غير صالح: ' + err.message); }
   };
   reader.readAsText(file);
+}
+
+function fileToDataURL(file){
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+/* ============ مشاركة الدرس في Google Classroom ============ */
+function shareToClassroom(){
+  if(!currentLesson){ alert('لا يوجد درس مفتوح'); return; }
+  const url = window.location.href;
+  const title = '📘 ' + currentLesson.title + ' – ' + (currentLesson.level || '');
+  const body = 'درس في مادة علوم الطبيعة والحياة\n' + (currentLesson.description || '') + '\n\nالرابط: ' + url;
+
+  // فتح واجهة مشاركة Classroom مع ملء الحقول
+  const shareUrl = 'https://classroom.google.com/share?url=' +
+    encodeURIComponent(url) +
+    '&title=' + encodeURIComponent(title) +
+    '&body=' + encodeURIComponent(body);
+
+  window.open(shareUrl, '_blank');
+}
+
+/* ============ فتح Google Meet ============ */
+function openGoogleMeet(){
+  const confirmMeet = confirm(
+    '🎥 سيتم فتح Google Meet لإنشاء اجتماع جديد.\n\n' +
+    'سيُطلب منك تسجيل الدخول بحسابك: ' + TEACHER_EMAIL + '\n\n' +
+    'هل تريد المتابعة؟'
+  );
+  if(confirmMeet){
+    // إنشاء اجتماع جديد
+    window.open('https://meet.google.com/new', '_blank');
+  }
 }
