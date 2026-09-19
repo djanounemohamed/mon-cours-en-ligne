@@ -1,9 +1,9 @@
 [
   {
-    "id": "lesson-01",
+    "id": "lesson-1as-01",
     "title": "آليات النمو والتجديد الخلوي",
-    "level": "2 ثانوي",
-    "description": "دراسة الميتوز، تضاعف الـ ADN، والخلايا الجذعية.",
+    "level": "1AS",
+    "description": "جذع مشترك علوم وتكنولوجيا — دراسة الميتوز وتضاعف الـ ADN.",
     "knowledge": "<h3>1) مفهوم النمو</h3><p>النمو هو زيادة في الكتلة والقد ناتجة عن زيادة عدد الخلايا و/أو حجمها.</p><h3>2) الانقسام الخلوي (الميتوز)</h3><ul><li><strong>الطور التمهيدي</strong>: تكثّف الصبغيات</li><li><strong>الطور الاستوائي</strong>: اصطفاف الصبغيات</li><li><strong>الطور الانفصالي</strong>: انفصال الكروماتيدات</li><li><strong>الطور النهائي</strong>: تشكّل غشائين نوويين</li></ul><blockquote>النمو يتحقق بفضل تضاعف الـ ADN ثم الانقسام الخلوي.</blockquote>",
     "documents": [
       { "type": "image", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Mitosis_Stages.svg/500px-Mitosis_Stages.svg.png", "caption": "مراحل الميتوز" },
@@ -20,6 +20,52 @@
         "type": "text",
         "question": "اشرح باختصار آلية تضاعف الـ ADN.",
         "answer": "انفتاح السلسلتين ثم تكميل كل سلسلة بقواعد متكاملة، فينتج جزيئان مماثلان (تضاعف نصف محافظ)."
+      }
+    ]
+  },
+  {
+    "id": "lesson-2as-01",
+    "title": "التركيب الضوئي",
+    "level": "2AS",
+    "description": "السنة الثانية ثانوي — آليات تحويل الطاقة الضوئية إلى طاقة كيميائية.",
+    "knowledge": "<h3>1) تعريف التركيب الضوئي</h3><p>عملية حيوية تُحوّل فيها النباتات الخضراء الطاقة الضوئية إلى طاقة كيميائية على شكل مواد عضوية.</p><h3>2) المعادلة الإجمالية</h3><blockquote>6CO₂ + 6H₂O + طاقة ضوئية → C₆H₁₂O₆ + 6O₂</blockquote><h3>3) المرحلتان</h3><ul><li><strong>المرحلة الضوئية</strong>: تحدث في الغرانا، إنتاج ATP و NADPH</li><li><strong>المرحلة اللاضوئية (كالفن)</strong>: تحدث في الستروما، تثبيت CO₂ لإنتاج السكريات</li></ul>",
+    "documents": [
+      { "type": "image", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Photosynthesis_equation.svg/500px-Photosynthesis_equation.svg.png", "caption": "معادلة التركيب الضوئي" }
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "question": "أين تحدث المرحلة الضوئية في الصانعة الخضراء؟",
+        "options": ["الستروما", "الغرانا", "الغشاء الخارجي", "النواة"],
+        "correct": 1
+      },
+      {
+        "type": "text",
+        "question": "ما هي نواتج المرحلة الضوئية؟",
+        "answer": "ATP و NADPH و O₂"
+      }
+    ]
+  },
+  {
+    "id": "lesson-3as-01",
+    "title": "آليات تحويل الطاقة على مستوى الميتوكوندري",
+    "level": "3AS",
+    "description": "السنة الثالثة ثانوي — التنفس الخلوي وتخليق ATP.",
+    "knowledge": "<h3>1) التنفس الخلوي</h3><p>عملية تُفكك فيها الجزيئات العضوية (الغلوكوز) في وجود O₂ لإنتاج ATP و CO₂ و H₂O.</p><h3>2) المعادلة</h3><blockquote>C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + طاقة (36 ATP)</blockquote><h3>3) المراحل</h3><ol><li><strong>التحلل السكري</strong>: في الهيولى</li><li><strong>دورة كريبس</strong>: في الميتوكندري</li><li><strong>السلسلة التنفسية</strong>: على الغشاء الداخلي، إنتاج كبير لـ ATP</li></ol>",
+    "documents": [
+      { "type": "image", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Cellular_respiration_ar.svg/500px-Cellular_respiration_ar.svg.png", "caption": "مراحل التنفس الخلوي" }
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "question": "أين تحدث دورة كريبس؟",
+        "options": ["الهيولى", "الميتوكندري", "النواة", "الغشاء الخلوي"],
+        "correct": 1
+      },
+      {
+        "type": "text",
+        "question": "كم عدد جزيئات ATP الناتجة عن التنفس الخلوي؟",
+        "answer": "حوالي 36 إلى 38 جزيئة ATP"
       }
     ]
   }

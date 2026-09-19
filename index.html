@@ -15,7 +15,7 @@
       <span class="logo">🔬</span>
       <div>
         <h1>منصة الدروس</h1>
-        <p>العلوم الطبيعية للتلاميذ</p>
+        <p>العلوم الطبيعية – الأستاذ دجانون محمد</p>
       </div>
     </div>
     <nav>
@@ -26,31 +26,130 @@
 </header>
 
 <main class="container">
+
   <section class="hero">
-    <h2>📖 اختر درساً للبدء</h2>
-    <p>كل درس يحتوي على: المعارف، الوثائق، والتقويم.</p>
+    <h2>📖 اختر قسمك</h2>
+    <p>منصة تعليمية لمادة العلوم الطبيعية — دروس، وثائق، وتقويمات تفاعلية</p>
   </section>
+
+  <!-- الأقسام الثلاثة -->
+  <div class="sections-grid">
+    <a href="#lessons" class="section-card" onclick="filterLevel('1AS')">
+      <div class="section-icon">🧪</div>
+      <h3>جذع مشترك علوم وتكنولوجيا</h3>
+      <p>مادة العلوم الطبيعية</p>
+      <span class="section-badge">1AS</span>
+    </a>
+
+    <a href="#lessons" class="section-card" onclick="filterLevel('2AS')">
+      <div class="section-icon">🧬</div>
+      <h3>السنة الثانية ثانوي</h3>
+      <p>مادة العلوم الطبيعية</p>
+      <span class="section-badge">2AS</span>
+    </a>
+
+    <a href="#lessons" class="section-card" onclick="filterLevel('3AS')">
+      <div class="section-icon">🔬</div>
+      <h3>السنة الثالثة ثانوي</h3>
+      <p>مادة العلوم الطبيعية</p>
+      <span class="section-badge">3AS</span>
+    </a>
+  </div>
+
+  <!-- شريط الاتصال -->
+  <section class="contact-bar">
+    <h3>📞 للتواصل والاستفسار</h3>
+    <div class="contact-buttons">
+      <a href="https://wa.me/213674478432?text=السلام%20عليكم%20أستاذ" 
+         target="_blank" class="contact-btn whatsapp">
+        <span class="contact-icon">💬</span>
+        <div>
+          <strong>WhatsApp</strong>
+          <small>0674478432</small>
+        </div>
+      </a>
+
+      <a href="https://wa.me/213540402254?text=السلام%20عليكم%20أستاذ" 
+         target="_blank" class="contact-btn whatsapp">
+        <span class="contact-icon">💬</span>
+        <div>
+          <strong>WhatsApp</strong>
+          <small>0540402254</small>
+        </div>
+      </a>
+
+      <a href="https://t.me/+213674478432" 
+         target="_blank" class="contact-btn telegram">
+        <span class="contact-icon">✈️</span>
+        <div>
+          <strong>Telegram</strong>
+          <small>0674478432</small>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/djanoune1960" 
+         target="_blank" class="contact-btn facebook">
+        <span class="contact-icon">📘</span>
+        <div>
+          <strong>Facebook</strong>
+          <small>djanoune1960</small>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- فاصل -->
+  <h2 class="section-title" id="lessons">📚 الدروس المتاحة</h2>
 
   <div class="filters">
     <input type="text" id="searchInput" placeholder="🔍 ابحث عن درس...">
     <select id="levelFilter">
-      <option value="">جميع المستويات</option>
+      <option value="">جميع الأقسام</option>
+      <option value="1AS">جذع مشترك علوم وتكنولوجيا</option>
+      <option value="2AS">السنة الثانية ثانوي</option>
+      <option value="3AS">السنة الثالثة ثانوي</option>
     </select>
   </div>
 
   <div id="lessonsGrid" class="lessons-grid"></div>
+
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p>© <span id="year"></span> منصة الدروس</p>
+    <p>© <span id="year"></span> منصة الدروس – الأستاذ دجانون محمد</p>
+    <p class="footer-contact">
+      📱 0674478432 / 0540402254 • 
+      ✈️ Telegram: 0674478432 • 
+      📘 Facebook: djanoune1960
+    </p>
   </div>
 </footer>
+
+<!-- زر الاتصال العائم -->
+<div class="contact-fab" onclick="toggleContactMenu()">📞</div>
+<div class="contact-menu" id="contactMenu">
+  <a href="https://wa.me/213674478432" target="_blank" class="fab-wa" title="WhatsApp 1">💬</a>
+  <a href="https://wa.me/213540402254" target="_blank" class="fab-wa" title="WhatsApp 2">💬</a>
+  <a href="https://t.me/+213674478432" target="_blank" class="fab-tg" title="Telegram">✈️</a>
+  <a href="https://www.facebook.com/djanoune1960" target="_blank" class="fab-fb" title="Facebook">📘</a>
+</div>
 
 <script src="assets/app.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
   initHome();
+
+  function toggleContactMenu(){
+    document.getElementById('contactMenu').classList.toggle('show');
+  }
+  function filterLevel(lv){
+    setTimeout(() => {
+      const sel = document.getElementById('levelFilter');
+      sel.value = lv;
+      sel.dispatchEvent(new Event('change'));
+    }, 100);
+  }
 </script>
 </body>
 </html>
