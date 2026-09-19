@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>منصة الدروس – العلوم الطبيعية</title>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<title>منصة الدروس – الأستاذ دجانون محمد</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -12,144 +12,523 @@
 <header class="site-header">
   <div class="container">
     <div class="brand">
-      <span class="logo">🔬</span>
+      <div class="logo-3d">🔬</div>
       <div>
         <h1>منصة الدروس</h1>
-        <p>العلوم الطبيعية – الأستاذ دجانون محمد</p>
+        <p>الأستاذ دجانون محمد – علوم الطبيعة والحياة</p>
       </div>
     </div>
     <nav>
-      <a href="index.html" class="active">🏠 الرئيسية</a>
-      <a href="admin.html">⚙️ الإدارة</a>
+      <a href="index.html" class="btn-nav active">🏠 الرئيسية</a>
+      <a href="#program" class="btn-nav">📚 البرنامج</a>
+      <a href="admin.html" class="btn-nav">⚙️ الإدارة</a>
     </nav>
   </div>
 </header>
 
 <main class="container">
 
-  <section class="hero">
-    <h2>📖 اختر قسمك</h2>
-    <p>منصة تعليمية لمادة العلوم الطبيعية — دروس، وثائق، وتقويمات تفاعلية</p>
-  </section>
-
-  <!-- الأقسام الثلاثة -->
-  <div class="sections-grid">
-    <a href="#lessons" class="section-card" onclick="filterLevel('1AS')">
-      <div class="section-icon">🧪</div>
-      <h3>جذع مشترك علوم وتكنولوجيا</h3>
-      <p>مادة العلوم الطبيعية</p>
-      <span class="section-badge">1AS</span>
-    </a>
-
-    <a href="#lessons" class="section-card" onclick="filterLevel('2AS')">
-      <div class="section-icon">🧬</div>
-      <h3>السنة الثانية ثانوي</h3>
-      <p>مادة العلوم الطبيعية</p>
-      <span class="section-badge">2AS</span>
-    </a>
-
-    <a href="#lessons" class="section-card" onclick="filterLevel('3AS')">
-      <div class="section-icon">🔬</div>
-      <h3>السنة الثالثة ثانوي</h3>
-      <p>مادة العلوم الطبيعية</p>
-      <span class="section-badge">3AS</span>
-    </a>
-  </div>
-
-  <!-- شريط الاتصال -->
-  <section class="contact-bar">
-    <h3>📞 للتواصل والاستفسار</h3>
-    <div class="contact-buttons">
-      <a href="https://wa.me/213674478432?text=السلام%20عليكم%20أستاذ" 
-         target="_blank" class="contact-btn whatsapp">
-        <span class="contact-icon">💬</span>
-        <div>
-          <strong>WhatsApp</strong>
-          <small>0674478432</small>
+  <section class="hero-3d">
+    <div class="hero-content">
+      <h2>📖 منصة تعليمية شاملة</h2>
+      <p>دروس، وثائق، وتمارين تفاعلية في مادة علوم الطبيعة والحياة</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">مستويات</span>
         </div>
-      </a>
-
-      <a href="https://wa.me/213540402254?text=السلام%20عليكم%20أستاذ" 
-         target="_blank" class="contact-btn whatsapp">
-        <span class="contact-icon">💬</span>
-        <div>
-          <strong>WhatsApp</strong>
-          <small>0540402254</small>
+        <div class="stat-item">
+          <span class="stat-num">30+</span>
+          <span class="stat-label">درس</span>
         </div>
-      </a>
-
-      <a href="https://t.me/+213674478432" 
-         target="_blank" class="contact-btn telegram">
-        <span class="contact-icon">✈️</span>
-        <div>
-          <strong>Telegram</strong>
-          <small>0674478432</small>
+        <div class="stat-item">
+          <span class="stat-num">∞</span>
+          <span class="stat-label">مراجعة</span>
         </div>
-      </a>
-
-      <a href="https://www.facebook.com/djanoune1960" 
-         target="_blank" class="contact-btn facebook">
-        <span class="contact-icon">📘</span>
-        <div>
-          <strong>Facebook</strong>
-          <small>djanoune1960</small>
-        </div>
-      </a>
+      </div>
     </div>
   </section>
 
-  <!-- فاصل -->
-  <h2 class="section-title" id="lessons">📚 الدروس المتاحة</h2>
+  <!-- الأقسام الأربعة -->
+  <h2 class="section-heading">🎯 اختر مستواك الدراسي</h2>
+  <div class="sections-grid">
+    
+    <a href="#level-1AS" class="section-card card-blue" onclick="scrollToLevel('level-1AS')">
+      <div class="card-glow"></div>
+      <div class="section-icon">🧪</div>
+      <h3>السنة الأولى ثانوي</h3>
+      <p class="section-sub">جذع مشترك علوم وتكنولوجيا</p>
+      <div class="section-info">
+        <span>📖 15 درس</span>
+      </div>
+      <div class="section-btn">اكتشف ←</div>
+    </a>
 
-  <div class="filters">
-    <input type="text" id="searchInput" placeholder="🔍 ابحث عن درس...">
-    <select id="levelFilter">
-      <option value="">جميع الأقسام</option>
-      <option value="1AS">جذع مشترك علوم وتكنولوجيا</option>
-      <option value="2AS">السنة الثانية ثانوي</option>
-      <option value="3AS">السنة الثالثة ثانوي</option>
-    </select>
+    <a href="#level-2AS" class="section-card card-green" onclick="scrollToLevel('level-2AS')">
+      <div class="card-glow"></div>
+      <div class="section-icon">🧬</div>
+      <h3>السنة الثانية ثانوي</h3>
+      <p class="section-sub">علوم تجريبية + رياضيات</p>
+      <div class="section-info">
+        <span>📖 8 دروس</span>
+      </div>
+      <div class="section-btn">اكتشف ←</div>
+    </a>
+
+    <a href="#level-2AS-L" class="section-card card-orange" onclick="scrollToLevel('level-2AS-L')">
+      <div class="card-glow"></div>
+      <div class="section-icon">📚</div>
+      <h3>السنة الثانية ثانوي</h3>
+      <p class="section-sub">آداب وفلسفة</p>
+      <div class="section-info">
+        <span>📖 3 دروس</span>
+      </div>
+      <div class="section-btn">اكتشف ←</div>
+    </a>
+
+    <a href="#level-3AS" class="section-card card-purple" onclick="scrollToLevel('level-3AS')">
+      <div class="card-glow"></div>
+      <div class="section-icon">🔬</div>
+      <h3>السنة الثالثة ثانوي</h3>
+      <p class="section-sub">علوم تجريبية</p>
+      <div class="section-info">
+        <span>📖 10 دروس</span>
+      </div>
+      <div class="section-btn">اكتشف ←</div>
+    </a>
   </div>
 
-  <div id="lessonsGrid" class="lessons-grid"></div>
+  <!-- ======================== الفهرس الشامل ======================== -->
+  <section id="program" class="program-section">
+    <h2 class="section-heading-3d">📋 الفهرس الشامل للدروس</h2>
+
+    <!-- ═══ المستوى الأول: 1AS ═══ -->
+    <div id="level-1AS" class="level-block">
+      <div class="level-header level-header-blue">
+        <span class="level-icon">🧪</span>
+        <div>
+          <h3>السنة الأولى ثانوي – جذع مشترك علوم وتكنولوجيا</h3>
+          <p>المجال: تحويل الطاقة واستعمال المادة</p>
+        </div>
+      </div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=1as-01" class="lesson-item">
+          <span class="lesson-num">01</span>
+          <div class="lesson-info">
+            <h4>آليات النمو والتجديد الخلوي عند الكائن الحي</h4>
+            <p>دراسة الميتوز، مناطق النمو، والأنسجة المتخصصة</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-02" class="lesson-item">
+          <span class="lesson-num">02</span>
+          <div class="lesson-info">
+            <h4>مناطق النمو عند الكائن الحي</h4>
+            <p>الأنسجة الإشائية عند الإنسان والحيوان، والمرستيمية عند النبات</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-03" class="lesson-item">
+          <span class="lesson-num">03</span>
+          <div class="lesson-info">
+            <h4>مراحل الانقسام الخيطي (الميتوز)</h4>
+            <p>المراحل الأربع: التمهيدية، الاستوائية، الانفصالية، النهائية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-04" class="lesson-item">
+          <span class="lesson-num">04</span>
+          <div class="lesson-info">
+            <h4>مصدر المادة اللازمة للنمو عند النبات والحيوان</h4>
+            <p>التركيب الحيوي، النسغ الكامل، والنسغ الخام</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-05" class="lesson-item">
+          <span class="lesson-num">05</span>
+          <div class="lesson-info">
+            <h4>مصدر الطاقة الضرورية للبناء الحيوي</h4>
+            <p>هدم الأغذية، إنتاج الطاقة، والتحولات الطاقوية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-06" class="lesson-item">
+          <span class="lesson-num">06</span>
+          <div class="lesson-info">
+            <h4>تحويل الطاقة الكيميائية إلى طاقة داخلية قابلة للاستعمال</h4>
+            <p>التنفس والتخمر – آليتان حيويتان لإنتاج الطاقة</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-07" class="lesson-item">
+          <span class="lesson-num">07</span>
+          <div class="lesson-info">
+            <h4>العناصر الأساسية لتنامي النبات الأخضر</h4>
+            <p>حاجة النبات للضوء، الماء، والـ CO₂</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-08" class="lesson-item">
+          <span class="lesson-num">08</span>
+          <div class="lesson-info">
+            <h4>الطاقة الضوئية مصدر الطاقة في المواد السكرية</h4>
+            <p>دور اليخضور، الصانعات الخضراء، والتركيب الضوئي</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-09" class="lesson-item">
+          <span class="lesson-num">09</span>
+          <div class="lesson-info">
+            <h4>مقارنة التركيب الضوئي والتركيب الحيوي</h4>
+            <p>الفرق بين الظاهرتين، الموقع، والنتائج</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-10" class="lesson-item">
+          <span class="lesson-num">10</span>
+          <div class="lesson-info">
+            <h4>تقنيات تحسين إنتاج الكتلة الحيوية</h4>
+            <p>التقنيات المستعملة من طرف الإنسان لتحسين الإنتاج</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-11" class="lesson-item">
+          <span class="lesson-num">11</span>
+          <div class="lesson-info">
+            <h4>تأثير العوامل الخارجية على إنتاج الكتلة الحيوية</h4>
+            <p>العوامل المناخية والتربية، العامل المحدد</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-12" class="lesson-item">
+          <span class="lesson-num">12</span>
+          <div class="lesson-info">
+            <h4>تأثير العوامل الداخلية (الوراثية) على إنتاج الكتلة الحيوية</h4>
+            <p>المورثة، الأليل، التهجين، وانتقاء السلالات المرغوبة</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-13" class="lesson-item">
+          <span class="lesson-num">13</span>
+          <div class="lesson-info">
+            <h4>العلاقات بين الوظيفة القلبية والتنفسية أثناء الجهد</h4>
+            <p>تأثير الجهد العضلي على الوتيرتين القلبية والتنفسية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-14" class="lesson-item">
+          <span class="lesson-num">14</span>
+          <div class="lesson-info">
+            <h4>دور النظام العصبي في إعادة التوازن الوظيفي</h4>
+            <p>التحكم العصبي، المراكز البصلية، والعصبونات</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=1as-15" class="lesson-item">
+          <span class="lesson-num">15</span>
+          <div class="lesson-info">
+            <h4>دور النظام الهرموني في إعادة التوازن الوظيفي</h4>
+            <p>الغدد الصماء، الهرمونات، والتحكم الهرموني</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ═══ المستوى الثاني: 2AS علوم ═══ -->
+    <div id="level-2AS" class="level-block">
+      <div class="level-header level-header-green">
+        <span class="level-icon">🧬</span>
+        <div>
+          <h3>السنة الثانية ثانوي – علوم تجريبية + رياضيات</h3>
+          <p>المجالات: وحدة الكائنات الحية، أسس التنوع البيولوجي، التنظيم العصبي الهرموني</p>
+        </div>
+      </div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=2as-01" class="lesson-item">
+          <span class="lesson-num">01</span>
+          <div class="lesson-info">
+            <h4>الخلية وحدة بنيوية للكائنات الحية</h4>
+            <p>الدراسة بالمجهز الضوئي والإلكتروني</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2as-02" class="lesson-item">
+          <span class="lesson-num">02</span>
+          <div class="lesson-info">
+            <h4>تماثل بنية ADN عند الكائنات الحية</h4>
+            <p>التركيب الكيميائي، بنية ADN، الطبيعة الكيميائية للمورثة</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2as-03" class="lesson-item">
+          <span class="lesson-num">03</span>
+          <div class="lesson-info">
+            <h4>دور الانقسام المنصف في التفرّد والتنوع الوراثي</h4>
+            <p>المراحل، الاختزال الصبغي، والتنوع الوراثي</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2as-04" class="lesson-item">
+          <span class="lesson-num">04</span>
+          <div class="lesson-info">
+            <h4>دور الإلقاح في التفرّد والتنوع الوراثي</h4>
+            <p>التقاء الأمشاج، البيضة الملقحة، والتنوع</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2as-05" class="lesson-item">
+          <span class="lesson-num">05</span>
+          <div class="lesson-info">
+            <h4>التنوع الظاهري والتنوع الجيني (المورثي)</h4>
+            <p>النمط الظاهري، النمط الوراثي، وتعبير المورثات</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2as-06" class="lesson-item">
+          <span class="lesson-num">06</span>
+          <div class="lesson-info">
+            <h4>دور الطفرات الوراثية في التنوع البيولوجي</h4>
+            <p>الطفرات، أسبابها، وأنواعها</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2as-07" class="lesson-item">
+          <span class="lesson-num">07</span>
+          <div class="lesson-info">
+            <h4>المراقبة الهرمونية الرجعية السالبة والموجبة</h4>
+            <p>تنظيم التكاثر، الجسم الأصفر، والحمل</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2as-08" class="lesson-item">
+          <span class="lesson-num">08</span>
+          <div class="lesson-info">
+            <h4>التحكم في النسل</h4>
+            <p>طرق منع الحمل، الأمراض المعدية المنقولة جنسياً</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ═══ المستوى الثاني: 2AS آداب ═══ -->
+    <div id="level-2AS-L" class="level-block">
+      <div class="level-header level-header-orange">
+        <span class="level-icon">📚</span>
+        <div>
+          <h3>السنة الثانية ثانوي – آداب وفلسفة</h3>
+          <p>المجال: التنظيم الهرموني والعصبي</p>
+        </div>
+      </div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=2asl-01" class="lesson-item">
+          <span class="lesson-num">01</span>
+          <div class="lesson-info">
+            <h4>التنظيم الهرموني السكري</h4>
+            <p>التحلون، الأنسولين، الغلوكاغون، والداء السكري</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2asl-02" class="lesson-item">
+          <span class="lesson-num">02</span>
+          <div class="lesson-info">
+            <h4>التنظيم الهرموني العصبي للتكاثر</h4>
+            <p>المراقبة الرجعية السالبة والموجبة</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=2asl-03" class="lesson-item">
+          <span class="lesson-num">03</span>
+          <div class="lesson-info">
+            <h4>التحكم في النسل</h4>
+            <p>الطرق الحديثة، الآليات، والحماية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- ═══ المستوى الثالث: 3AS ═══ -->
+    <div id="level-3AS" class="level-block">
+      <div class="level-header level-header-purple">
+        <span class="level-icon">🔬</span>
+        <div>
+          <h3>السنة الثالثة ثانوي – علوم تجريبية</h3>
+          <p>المجالات: التخصص الوظيفي للبروتينات، تحويل الطاقة، التكتونية العامة</p>
+        </div>
+      </div>
+      <div class="lessons-list">
+
+        <a href="lesson.html?id=3as-01" class="lesson-item">
+          <span class="lesson-num">01</span>
+          <div class="lesson-info">
+            <h4>تركيب البروتين</h4>
+            <p>الاستنساخ، الترجمة، والشفرة الوراثية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-02" class="lesson-item">
+          <span class="lesson-num">02</span>
+          <div class="lesson-info">
+            <h4>العلاقة بين بنية ووظيفة البروتين</h4>
+            <p>البنيات الفراغية، الأحماض الأمينية، والرابطة الببتيدية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-03" class="lesson-item">
+          <span class="lesson-num">03</span>
+          <div class="lesson-info">
+            <h4>دور البروتينات في التحفيز الإنزيمي</h4>
+            <p>الإنزيمات، الركيزة، التكامل البنيوي، والعوامل المؤثرة</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-04" class="lesson-item">
+          <span class="lesson-num">04</span>
+          <div class="lesson-info">
+            <h4>دور البروتينات في الدفاع عن الذات</h4>
+            <p>الذات، اللاذات، الجسم المضاد، والرد المناعي</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-05" class="lesson-item">
+          <span class="lesson-num">05</span>
+          <div class="lesson-info">
+            <h4>دور البروتينات في الاتصال العصبي</h4>
+            <p>النقل المشبكي، المبلغ العصبي، وكمون العمل</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-06" class="lesson-item">
+          <span class="lesson-num">06</span>
+          <div class="lesson-info">
+            <h4>تحويل الطاقة الضوئية إلى طاقة كيميائية كامنة</h4>
+            <p>المرحلة الكيموضوئية والكيموحيوية، وحلقة كالفن</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-07" class="lesson-item">
+          <span class="lesson-num">07</span>
+          <div class="lesson-info">
+            <h4>تحويل الطاقة الكيميائية الكامنة إلى ATP</h4>
+            <p>التحلل السكري، دورة كريبس، والسلسلة التنفسية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-08" class="lesson-item">
+          <span class="lesson-num">08</span>
+          <div class="lesson-info">
+            <h4>حوصلة التحولات الطاقوية على المستوى الخلوي</h4>
+            <p>التكامل بين التنفس والتخمر</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-09" class="lesson-item">
+          <span class="lesson-num">09</span>
+          <div class="lesson-info">
+            <h4>بنية الكرة الأرضية</h4>
+            <p>القشرة، المعطف، النواة، والنماذج السيزمولوجية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+        <a href="lesson.html?id=3as-10" class="lesson-item">
+          <span class="lesson-num">10</span>
+          <div class="lesson-info">
+            <h4>النشاط التكتوني والظواهر الجيولوجية المرتبطة به</h4>
+            <p>التباعد، التقارب، الغوص، وبناء السلاسل الجبلية</p>
+          </div>
+          <span class="lesson-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- شريط الاتصال -->
+  <section class="contact-bar-3d">
+    <h3>📞 للتواصل والاستفسار</h3>
+    <div class="contact-buttons">
+      <a href="https://wa.me/213674478432" target="_blank" class="contact-btn btn-wa">
+        <span class="contact-icon">💬</span>
+        <div><strong>WhatsApp</strong><small>0674478432</small></div>
+      </a>
+      <a href="https://wa.me/213540402254" target="_blank" class="contact-btn btn-wa">
+        <span class="contact-icon">💬</span>
+        <div><strong>WhatsApp</strong><small>0540402254</small></div>
+      </a>
+      <a href="https://t.me/+213674478432" target="_blank" class="contact-btn btn-tg">
+        <span class="contact-icon">✈️</span>
+        <div><strong>Telegram</strong><small>0674478432</small></div>
+      </a>
+      <a href="https://www.facebook.com/djanoune1960" target="_blank" class="contact-btn btn-fb">
+        <span class="contact-icon">📘</span>
+        <div><strong>Facebook</strong><small>djanoune1960</small></div>
+      </a>
+    </div>
+  </section>
 
 </main>
 
 <footer class="site-footer">
   <div class="container">
     <p>© <span id="year"></span> منصة الدروس – الأستاذ دجانون محمد</p>
-    <p class="footer-contact">
-      📱 0674478432 / 0540402254 • 
-      ✈️ Telegram: 0674478432 • 
-      📘 Facebook: djanoune1960
-    </p>
+    <p class="footer-sub">علوم الطبيعة والحياة • التعليم الثانوي</p>
   </div>
 </footer>
 
-<!-- زر الاتصال العائم -->
 <div class="contact-fab" onclick="toggleContactMenu()">📞</div>
 <div class="contact-menu" id="contactMenu">
-  <a href="https://wa.me/213674478432" target="_blank" class="fab-wa" title="WhatsApp 1">💬</a>
-  <a href="https://wa.me/213540402254" target="_blank" class="fab-wa" title="WhatsApp 2">💬</a>
-  <a href="https://t.me/+213674478432" target="_blank" class="fab-tg" title="Telegram">✈️</a>
-  <a href="https://www.facebook.com/djanoune1960" target="_blank" class="fab-fb" title="Facebook">📘</a>
+  <a href="https://wa.me/213674478432" target="_blank" class="fab-wa">💬</a>
+  <a href="https://wa.me/213540402254" target="_blank" class="fab-wa">💬</a>
+  <a href="https://t.me/+213674478432" target="_blank" class="fab-tg">✈️</a>
+  <a href="https://www.facebook.com/djanoune1960" target="_blank" class="fab-fb">📘</a>
 </div>
 
 <script src="assets/app.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
-  initHome();
-
-  function toggleContactMenu(){
-    document.getElementById('contactMenu').classList.toggle('show');
-  }
-  function filterLevel(lv){
-    setTimeout(() => {
-      const sel = document.getElementById('levelFilter');
-      sel.value = lv;
-      sel.dispatchEvent(new Event('change'));
-    }, 100);
-  }
+  function toggleContactMenu(){ document.getElementById('contactMenu').classList.toggle('show'); }
+  function scrollToLevel(id){ setTimeout(() => document.getElementById(id).scrollIntoView({behavior:'smooth'}), 50); }
 </script>
 </body>
 </html>
