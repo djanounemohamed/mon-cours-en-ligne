@@ -1,9 +1,18 @@
-cd mon-cours-en-ligne
+# 🎓 منصة الدروس عبر الإنترنت
 
-git init
-git add .
-git commit -m "الإصدار الأول من منصة الدروس"
-git branch -M main
+منصة تعليمية لتقديم دروس العلوم الطبيعية للتلاميذ عبر **GitHub Pages**، مع تكامل **Google Classroom**.
 
-git remote add origin https://github.com/USERNAME/mon-cours-en-ligne.git
-git push -u origin main
+---
+
+## ✨ الميزات
+
+- 📘 **صفحات مستقلة** لكل درس: المعارف / الوثائق / التقويم
+- 🎬 **معرض وسائط** يدعم الصور، الفيديو، YouTube، وملفات PDF
+- 📝 **تقويم تفاعلي** (اختيار من متعدد + إجابات نصية)
+- 🛠️ **لوحة إدارة** لإنشاء وتعديل الدروس
+- 📱 **تصميم متجاوب** يعمل على الجوال والحاسوب
+- 🔗 **تكامل** مع Google Classroom
+
+---
+
+## 🗂️ هيكل المشروع
