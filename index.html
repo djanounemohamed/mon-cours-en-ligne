@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>منصة الدروس – العلوم الطبيعية</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <span class="logo">🔬</span>
+      <div>
+        <h1>منصة الدروس</h1>
+        <p>العلوم الطبيعية للتلاميذ</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html" class="active">🏠 الرئيسية</a>
+      <a href="admin.html">⚙️ الإدارة</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h2>📖 اختر درساً للبدء</h2>
+    <p>كل درس يحتوي على: المعارف، الوثائق، والتقويم.</p>
+  </section>
+
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="🔍 ابحث عن درس...">
+    <select id="levelFilter">
+      <option value="">جميع المستويات</option>
+    </select>
+  </div>
+
+  <div id="lessonsGrid" class="lessons-grid"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> منصة الدروس</p>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  initHome();
+</script>
+</body>
+</html>

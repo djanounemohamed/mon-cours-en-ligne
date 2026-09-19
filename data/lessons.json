@@ -1,0 +1,26 @@
+[
+  {
+    "id": "lesson-01",
+    "title": "آليات النمو والتجديد الخلوي",
+    "level": "2 ثانوي",
+    "description": "دراسة الميتوز، تضاعف الـ ADN، والخلايا الجذعية.",
+    "knowledge": "<h3>1) مفهوم النمو</h3><p>النمو هو زيادة في الكتلة والقد ناتجة عن زيادة عدد الخلايا و/أو حجمها.</p><h3>2) الانقسام الخلوي (الميتوز)</h3><ul><li><strong>الطور التمهيدي</strong>: تكثّف الصبغيات</li><li><strong>الطور الاستوائي</strong>: اصطفاف الصبغيات</li><li><strong>الطور الانفصالي</strong>: انفصال الكروماتيدات</li><li><strong>الطور النهائي</strong>: تشكّل غشائين نوويين</li></ul><blockquote>النمو يتحقق بفضل تضاعف الـ ADN ثم الانقسام الخلوي.</blockquote>",
+    "documents": [
+      { "type": "image", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Mitosis_Stages.svg/500px-Mitosis_Stages.svg.png", "caption": "مراحل الميتوز" },
+      { "type": "youtube", "url": "https://www.youtube.com/watch?v=f-ldPgEfAHI", "caption": "شرح الميتوز" }
+    ],
+    "quiz": [
+      {
+        "type": "mcq",
+        "question": "ما هو عدد الخلايا الناتجة عن الميتوز؟",
+        "options": ["خلية واحدة", "خليتان", "أربع خلايا", "ثماني خلايا"],
+        "correct": 1
+      },
+      {
+        "type": "text",
+        "question": "اشرح باختصار آلية تضاعف الـ ADN.",
+        "answer": "انفتاح السلسلتين ثم تكميل كل سلسلة بقواعد متكاملة، فينتج جزيئان مماثلان (تضاعف نصف محافظ)."
+      }
+    ]
+  }
+]

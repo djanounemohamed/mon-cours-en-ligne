@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة الإدارة – منصة الدروس</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="admin-page">
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a href="index.html" class="back-btn">←</a>
+      <div><h1>⚙️ إدارة الدروس</h1></div>
+    </div>
+    <nav>
+      <button class="btn-secondary" onclick="exportLessons()">⬇️ تصدير lessons.json</button>
+      <label class="btn-secondary" style="cursor:pointer">
+        ⬆️ استيراد JSON
+        <input type="file" id="importFile" accept=".json" style="display:none">
+      </label>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="admin-toolbar">
+    <button class="btn-primary" onclick="newLesson()">➕ درس جديد</button>
+    <button class="btn-danger" onclick="clearAllLessons()">🗑️ حذف الكل</button>
+  </div>
+
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <h3>📚 الدروس</h3>
+      <ul id="lessonList" class="lesson-list"></ul>
+    </aside>
+
+    <section class="admin-editor">
+      <div id="editorEmpty" class="empty-state">
+        <p>📝 اختر درساً من القائمة أو أنشئ درساً جديداً.</p>
+      </div>
+
+      <form id="lessonForm" class="lesson-form" style="display:none">
+        <div class="form-row">
+          <label>عنوان الدرس</label>
+          <input type="text" id="f-title" required>
+        </div>
+        <div class="form-row">
+          <label>المستوى</label>
+          <input type="text" id="f-level" placeholder="مثال: 2 ثانوي">
+        </div>
+        <div class="form-row">
+          <label>وصف قصير</label>
+          <input type="text" id="f-desc">
+        </div>
+
+        <h4>📘 المعارف (HTML مدعوم)</h4>
+        <textarea id="f-knowledge" rows="10"></textarea>
+
+        <h4>🎬 الوثائق</h4>
+        <div id="mediaList"></div>
+        <button type="button" class="btn-small" onclick="addMediaItem()">➕ إضافة وثيقة</button>
+
+        <h4>📝 أسئلة التقويم</h4>
+        <div id="quizList"></div>
+        <button type="button" class="btn-small" onclick="addQuizQuestion()">➕ إضافة سؤال</button>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">💾 حفظ الدرس</button>
+          <button type="button" class="btn-secondary" onclick="deleteCurrentLesson()">🗑️ حذف</button>
+        </div>
+      </form>
+    </section>
+  </div>
+</main>
+
+<script src="assets/app.js"></script>
+<script>initAdmin();</script>
+</body>
+</html>
