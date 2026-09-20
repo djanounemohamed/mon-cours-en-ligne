@@ -432,3 +432,12 @@ img{max-width:100%}
   body{background:#fff}
   .page{display:block!important;page-break-after:always}
 }
+.btn-worksheet{
+  background:linear-gradient(135deg,#F57C00,#E65100);color:#fff;
+  border:none;padding:10px 18px;border-radius:10px;
+  font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;
+  box-shadow:0 3px 0 #7f2e00;
+  transition:.15s;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.btn-worksheet:hover{transform:translateY(-2px);box-shadow:0 5px 0 #7f2e00}

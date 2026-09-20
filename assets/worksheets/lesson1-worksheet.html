@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>اختبار النمو - Worksheet</title>
+<style>
+@page { 
+  size: A4; 
+  margin: 15mm 15mm 20mm 15mm;
+}
+@media print {
+  .no-print { display: none !important; }
+  body { padding: 0; margin: 0; background: #fff; }
+  .worksheet { box-shadow: none; margin: 0; max-width: none; padding: 0; }
+  .question { page-break-inside: avoid; }
+  .answer-key { page-break-before: always; }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt; 
+  line-height: 1.5; 
+  color: #000; 
+  background: #f5f5f5;
+}
+.toolbar { 
+  position: fixed; top: 0; left: 0; right: 0; 
+  background: linear-gradient(135deg, #4A90A4, #2E6B77); 
+  color: #fff; padding: 12px 20px; 
+  display: flex; justify-content: space-between; align-items: center; 
+  z-index: 999; box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+}
+.toolbar-text { font-size: 14px; font-family: -apple-system, sans-serif; }
+.print-btn { 
+  background: #fff; color: #2E6B77; border: none; 
+  padding: 10px 24px; border-radius: 6px; 
+  font-size: 14px; font-weight: 600; cursor: pointer; 
+  font-family: -apple-system, sans-serif;
+}
+.print-btn:hover { transform: scale(1.03); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.worksheet {
+  max-width: 210mm;
+  margin: 60px auto 40px;
+  padding: 20mm;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #333;
+}
+.header h1 { 
+  font-size: 20pt; 
+  font-weight: bold; 
+  margin-bottom: 8px;
+}
+.header .meta { 
+  font-size: 11pt; 
+  color: #555; 
+}
+.student-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+}
+.info-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.info-field label {
+  font-weight: bold;
+  font-size: 11pt;
+}
+.info-field .line {
+  border-bottom: 1px solid #333;
+  width: 150px;
+  height: 20px;
+}
+.question {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px dotted #ccc;
+}
+.question:last-of-type {
+  border-bottom: none;
+}
+.question-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.question-number {
+  font-weight: bold;
+  font-size: 12pt;
+  min-width: 25px;
+}
+.question-number::after {
+  content: '.';
+}
+.question-text {
+  font-size: 12pt;
+  flex: 1;
+}
+.hint {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 8px 0 12px 35px;
+  font-size: 10pt;
+  color: #92400e;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+[dir="rtl"] .hint { margin-left: 0; margin-right: 35px; }
+.hint-icon { flex-shrink: 0; }
+.hint-text { flex: 1; }
+.options-grid {
+  margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+[dir="rtl"] .options-grid { margin-left: 0; margin-right: 35px; }
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.option-bubble {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 11pt;
+  flex-shrink: 0;
+}
+.option-text {
+  padding-top: 2px;
+  font-size: 11pt;
+}
+.answer-key {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 3px double #333;
+}
+.answer-key-title {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.answers-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.answer-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dotted #ddd;
+}
+.answer-num {
+  font-weight: bold;
+  min-width: 30px;
+}
+.answer-letter {
+  font-weight: bold;
+  color: #166534;
+  min-width: 25px;
+}
+.answer-rationale {
+  color: #555;
+  font-size: 10pt;
+  font-style: italic;
+  flex: 1;
+}
+</style>
+</head>
+<body>
+<div class="toolbar no-print">
+  <span class="toolbar-text">📄 Press <b>Ctrl+P</b> (Win) or <b>⌘+P</b> (Mac) to print or save as PDF</span>
+  <button class="print-btn" onclick="window.print()">🖨️ Print Worksheet</button>
+</div>
+<div class="worksheet">
+  <div class="header">
+    <h1>اختبار النمو</h1>
+    <div class="meta">10 أسئلة</div>
+  </div>
+  <div class="student-info">
+    <div class="info-field">
+      <label>Name:</label>
+      <div class="line"></div>
+    </div>
+    <div class="info-field">
+      <label>Date:</label>
+      <div class="line" style="width: 100px;"></div>
+    </div>
+    <div class="info-field">
+      <label>Score:</label>
+      <div class="line" style="width: 60px;"></div>
+    </div>
+  </div>
+  
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">1</span>
+            <span class="question-text">إذا تم تثبيط عملية استطالة الخلايا في القمة النامية للنبات مع استمرار الانقسام الخلوي بشكل طبيعي، فما هي النتيجة الأكثر احتمالاً لشكل النسيج المرستيمي؟</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">فكر في الترتيب الزمني لآليات النمو في المناطق المرستيمية النباتية.</span>
+        </div>
+      
+          <div class="options-grid">
+        <div class="option">
+          <span class="option-bubble">A</span>
+          <span class="option-text">زيادة كبيرة في عدد الخلايا مع بقاء حجم النسيج ثابتاً تقريباً.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">B</span>
+          <span class="option-text">تحول النسيج النباتي إلى نمط النمو الحيواني عبر زيادة حجم الخلايا فقط.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">C</span>
+          <span class="option-text">توقف كلي لنمو النبات وتلف الخلايا في المناطق المرستيمية.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">D</span>
+          <span class="option-text">تضاعف طول الساق بسرعة نتيجة تراكم المادة خارج الخلوية.</span>
+        </div>
+      </div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">2</span>
+            <span class="question-text">كيف تختلف علاقة 'انقسام الخلية' بالنمو عند الكائنات وحيدة الخلية مقارنة بالنباتات؟</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">قارن بين موضع 'الانقسام' في الجدول الزمني لنمو الخلية الواحدة مقابل نسيج النبات.</span>
+        </div>
+      
+          <div class="options-grid"></div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">3</span>
+            <span class="question-text">يعتبر النمو عملية معقدة لا تقتصر على زيادة العدد، بل تشمل أيضاً التوازن بين إنتاج المادة الخلوية و ___ في بعض الأنسجة المحددة.</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">ابحث عن المكون الذي يساهم في النمو ولكنه يتواجد خارج حدود الغشاء البلازمي للخلية.</span>
+        </div>
+      
+          <div class="options-grid"></div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">4</span>
+            <span class="question-text">وفقاً للمفهوم العلمي للنمو الخلوي، أي من العوامل التالية يجب أن تتوازن لضمان حدوث نمو 'منظم' للكائن الحي؟</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">راجع تعريف النمو كـ 'زيادة منظمة' والمكونات الأربعة التي يتوازن بينها.</span>
+        </div>
+      
+          <div class="options-grid">
+        <div class="option">
+          <span class="option-bubble">A</span>
+          <span class="option-text">الانكماش الدوري لحجم السيتوبلازم لتوفير الطاقة.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">B</span>
+          <span class="option-text">الزيادة في عدد الخلايا من خلال الانقسامات.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">C</span>
+          <span class="option-text">تراكم المادة خارج الخلوية في أنسجة معينة.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">D</span>
+          <span class="option-text">تصنيع البروتينات والمركبات الخلوية المختلفة.</span>
+        </div>
+      </div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">5</span>
+            <span class="question-text">لماذا لا يعتبر مجرد انقسام الخلية إلى خليتين نمواً كافياً في حالة الكائنات وحيدة الخلية وفقاً لما ورد في النص؟</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">فكر في الحالة التي يجب أن تصل إليها الخلية الوحيدة قبل أن تقرر الانقسام.</span>
+        </div>
+      
+          <div class="options-grid">
+        <div class="option">
+          <span class="option-bubble">A</span>
+          <span class="option-text">لأن النمو يرتبط أولاً بزيادة كتلة الخلية قبل انقسامها.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">B</span>
+          <span class="option-text">لأن النمو في وحيدات الخلية يحدث فقط عبر تراكم المادة خارج الخلوية.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">C</span>
+          <span class="option-text">لأن وحيدات الخلية تعتمد فقط على استطالة الخلايا دون انقسامها.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">D</span>
+          <span class="option-text">لأن الانقسام في وحيدات الخلية يؤدي دائماً إلى فقدان في المادة الوراثية.</span>
+        </div>
+      </div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">6</span>
+            <span class="question-text">ما الذي يميز 'المناطق المرستيمية' في النبات عن بقية أجزاء الجسم الحيواني من حيث آلية النمو؟</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">ركز على المواقع الجغرافية للنمو داخل الكائن الحي والعمليات التي تلي الانقسام.</span>
+        </div>
+      
+          <div class="options-grid"></div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">7</span>
+            <span class="question-text">عند الحيوانات، يتحقق النمو بدرجة كبيرة عبر آليتين متكاملتين هما تكاثر الخلايا و ___.</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">ابحث عن التغير الفيزيائي الذي يطرأ على الخلية الحيوانية نفسها بجانب زيادة عددها.</span>
+        </div>
+      
+          <div class="options-grid"></div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">8</span>
+            <span class="question-text">أي مما يلي يمثل أدق تعريف للنمو (Growth) بناءً على ما ورد في المصدر؟</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">ابحث عن الكلمات المفتاحية التي تصف طبيعة الزيادة والمكونات التي تتأثر بها.</span>
+        </div>
+      
+          <div class="options-grid">
+        <div class="option">
+          <span class="option-bubble">A</span>
+          <span class="option-text">زيادة عشوائية في عدد الخلايا لتغطية الجروح وتجديد الأنسجة التالفة.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">B</span>
+          <span class="option-text">تحول الكائن الحي من شكل إلى آخر خلال مراحل حياته المختلفة.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">C</span>
+          <span class="option-text">قدرة الكائن الحي على إنتاج أفراد جديدة تشبهه في الصفات الوراثية.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">D</span>
+          <span class="option-text">زيادة منظمة في الحجم أو الكتلة أو العدد نتيجة توازن عمليات خلوية متعددة.</span>
+        </div>
+      </div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">9</span>
+            <span class="question-text">ما هي العمليات التي تندرج تحت مفهوم 'تصنيع المركبات الخلوية' كجزء من آليات النمو؟</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">فكر في الأشياء التي تُبنى داخل الخلية لتزيد من 'مادتها'.</span>
+        </div>
+      
+          <div class="options-grid">
+        <div class="option">
+          <span class="option-bubble">A</span>
+          <span class="option-text">تحويل المواد الغذائية إلى كتل حيوية داخل الخلية.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">B</span>
+          <span class="option-text">استهلاك الطاقة لتقليل حجم الخلية قبل الانقسام.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">C</span>
+          <span class="option-text">تكوين مكونات غشائية وعضيات جديدة للخلية.</span>
+        </div>
+      
+        <div class="option">
+          <span class="option-bubble">D</span>
+          <span class="option-text">بناء سلاسل بروتينية جديدة داخل السيتوبلازم.</span>
+        </div>
+      </div>
+        </div>
+      
+        <div class="question">
+          <div class="question-header">
+            <span class="question-number">10</span>
+            <span class="question-text">وضح كيف تساهم 'زيادة حجم الخلايا' في نمو الكائن الحي دون الحاجة لزيادة عددها في بعض الأحيان.</span>
+          </div>
+          
+        <div class="hint">
+          <span class="hint-icon">💡</span>
+          <span class="hint-text">فكر في التغيرات التي تحدث داخل الخلية الواحدة لتجعلها تشغل مساحة أكبر ووزناً أثقل.</span>
+        </div>
+      
+          <div class="options-grid"></div>
+        </div>
+      
+  
+        <div class="answer-key">
+          <h2 class="answer-key-title">📝 مفتاح الإجابات</h2>
+          <div class="answers-grid">
+          <div class="answer-item">
+            <span class="answer-num">1.</span><span class="answer-letter">A</span>
+            <span class="answer-rationale">تعتمد زيادة حجم الأنسجة النباتية بشكل أساسي على الاستطالة بعد الانقسام؛ فإذا توقفت الاستطالة، ستتراكم الخلايا الناتجة عن الانقسام دون أن تؤدي إلى زيادة فعلية في طول أو حجم النسيج.</span>
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">2.</span><span class="answer-letter">-</span>
+            
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">3.</span><span class="answer-letter">-</span>
+            
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">4.</span><span class="answer-letter">B</span>
+            <span class="answer-rationale">تكاثر الخلايا هو أحد الركائز الأساسية لزيادة حجم الكتلة الحيوية في الكائنات متعددة الخلايا.</span>
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">5.</span><span class="answer-letter">A</span>
+            <span class="answer-rationale">يشترط النص للكائنات وحيدة الخلية أن يسبق الانقسام زيادة في كتلة الخلية، وإلا فإن الانقسام وحده سيؤدي لخلايا أصغر حجماً باستمرار.</span>
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">6.</span><span class="answer-letter">-</span>
+            
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">7.</span><span class="answer-letter">-</span>
+            
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">8.</span><span class="answer-letter">D</span>
+            <span class="answer-rationale">هذا التعريف يجمع العناصر الثلاثة (الحجم، الكتلة، العدد) ويؤكد على صفة 'التنظيم' و'التوازن' المذكورة في النص.</span>
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">9.</span><span class="answer-letter">A</span>
+            <span class="answer-rationale">هذا يمثل جوهر زيادة كتلة الخلية وتصنيع مركباتها.</span>
+          </div>
+        
+          <div class="answer-item">
+            <span class="answer-num">10.</span><span class="answer-letter">-</span>
+            
+          </div>
+        </div>
+        </div>
+      
+</div>
+</body>
+</html>

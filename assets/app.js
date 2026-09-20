@@ -510,4 +510,12 @@ document.addEventListener('DOMContentLoaded', function(){
   if(document.body.classList.contains('lesson-page')) return;
   if($('dynamicIndex')) renderDynamicIndex();
   if($('lessonsGrid')) initHome();
-});
+});/* ============ فتح ورقة الاختبار ============ */
+function openWorksheet(){
+  if(!currentLesson){ return; }
+  var id = currentLesson.id;
+  // استخدم رقم الدرس من order
+  var num = currentLesson.order || 1;
+  var url = 'assets/worksheets/lesson' + num + '-worksheet.html';
+  window.open(url, '_blank');
+}
