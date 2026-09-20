@@ -18,7 +18,9 @@
         <p id="lessonSubtitle"></p>
       </div>
     </div>
-    <nav>
+    <nav style="display:flex;gap:8px;flex-wrap:wrap">
+      <button onclick="shareToClassroom()" class="btn-classroom">📤 Classroom</button>
+      <button onclick="openGoogleMeet()" class="btn-meet">🎥 Meet</button>
       <button onclick="window.print()" class="btn-print">🖨️ طباعة</button>
     </nav>
   </div>
@@ -27,16 +29,13 @@
 <nav class="page-tabs">
   <div class="container">
     <button class="tab-btn active" data-page="knowledge">
-      <span class="tab-icon">📘</span>
-      <span class="tab-label">المعارف</span>
+      <span class="tab-icon">📘</span><span class="tab-label">المعارف</span>
     </button>
     <button class="tab-btn" data-page="documents">
-      <span class="tab-icon">🎬</span>
-      <span class="tab-label">الوثائق</span>
+      <span class="tab-icon">🎬</span><span class="tab-label">الوثائق</span>
     </button>
     <button class="tab-btn" data-page="assessment">
-      <span class="tab-icon">📝</span>
-      <span class="tab-label">التقويم</span>
+      <span class="tab-icon">📝</span><span class="tab-label">التقويم</span>
     </button>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
   </div>
@@ -85,11 +84,8 @@
   <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
   <div class="lightbox-content" id="lightboxContent"></div>
 </div>
-   <nav style="display:flex;gap:8px;flex-wrap:wrap">
-      <button onclick="shareToClassroom()" class="btn-classroom">📤 Classroom</button>
-      <button onclick="openGoogleMeet()" class="btn-meet">🎥 Meet</button>
-      <button onclick="window.print()" class="btn-print">🖨️ طباعة</button>
-    </nav><script src="assets/app.js"></script>
+
+<script src="assets/app.js"></script>
 <script>initLesson();</script>
 </body>
 </html>

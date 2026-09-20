@@ -1,24 +1,128 @@
-[
-  {
-    "id": "lesson-1789823062689",
-    "title": "آليات النمو",
-    "level": "1AS",
-    "description": "مفهوم النمو  النمو هو تزايد كتلة وحجم العضوية، ويرتبط بالنمو والتجديد الخلوي.",
-    "knowledge": ". مفهوم النمو\nالنمو هو تزايد كتلة وحجم العضوية، ويرتبط بالنمو والتجديد الخلوي.\n2. مظاهر النمو عند الإنسان\nيمكن إبراز النمو عند الإنسان من خلال:\nزيادة الطول والحجم والكتلة مع التقدم في العمر.\nزيادة عدد الخلايا نتيجة الانقسام الخيطي المتساوي.\nتجدد بعض الأنسجة باستمرار.\nتخصص الخلايا بعد انقسامها لتؤدي وظائف مختلفة.\nوتشير الوثيقة إلى أن النمو عند الإنسان والحيوان يتم على مستوى أنسجة متخصصة تحتوي خلايا قادرة على الانقسام، مما يسمح بالتجديد المتواصل للأنسجة.\n3. مظاهر النمو عند النبات\nيظهر النمو عند النبات من خلال:\nزيادة طول الجذر والساق.\nزيادة حجم النبات وكتلته.\nظهور أوراق وأعضاء جديدة.\nاستمرار تكوين خلايا جديدة في مناطق النمو.\nويحدث النمو عند النبات على مستوى النسيج المريستيمي (النسيج الإنشائي)، حيث تتميز خلاياه بالقدرة على الانقسام.\n4. مناطق النمو عند النبات\nتوضح الوثيقة أن نهاية الجذر تنتظم في منطقتين أساسيتين:\nالقمة النامية ← منطقة الاستطالة\nالقمة النامية: يحدث فيها تكاثر الخلايا بالانقسام.\nمنطقة الاستطالة: تزداد فيها أبعاد الخلايا، فتؤدي إلى زيادة طول الجذر.\nوتُقارن الوثيقة بين مظهر الخلايا في القمة النامية ومنطقة الاستطالة للوصول إلى مفهوم مناطق النمو وآليات حدوثه.\n5. الآلية الخلوية للنمو\nيمكن تلخيصها في المسار التالي:\nانقسام خلوي → زيادة عدد الخلايا → استطالة الخلايا → تمايز الخلايا → نمو العضوية وتجدد أنسجتها\nويُعد الانقسام الخيطي المتساوي (الميتوز) آلية أساسية في النمو والتجديد؛ فالخلية الإنشائية ثنائية الصيغة الصبغية (2ن)",
-    "documents": [
-      {
-        "type": "video",
-        "url": "https://youtu.be/imRXK3Bdnaw",
-        "caption": "فيديو حول الانقسام الاخلوي"
-      }
-    ],
-    "quiz": [
-      {
-        "type": "mcq",
-        "question": "من خلال دفترك الصحي انجز خلاصة حول النمو لديك",
-        "options": [],
-        "correct": 0
-      }
-    ]
-  }
-]
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>⚙️ لوحة إدارة الدروس</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.admin-container{max-width:1300px;margin:30px auto;padding:0 20px}
+.admin-grid{display:grid;grid-template-columns:300px 1fr;gap:24px}
+.admin-panel{background:#fff;border-radius:16px;padding:22px;box-shadow:0 4px 0 #c9d4e0, 0 8px 24px rgba(0,0,0,0.08)}
+.admin-panel h3{color:#0D47A1;margin:0 0 14px;font-size:17px;padding-bottom:10px;border-bottom:2px solid #e0e6ed}
+.lesson-list{list-style:none;max-height:600px;overflow-y:auto;padding:0;margin:0}
+.lesson-list li{padding:11px 14px;border-radius:10px;cursor:pointer;margin-bottom:6px;font-size:14px;background:#f8fafc;border:1px solid #e0e6ed}
+.lesson-list li:hover{background:#eef6ff;border-color:#c9dcf0}
+.lesson-list li.active{background:linear-gradient(135deg,#1565C0,#0D47A1);color:#fff}
+.form-row{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.form-row label{font-weight:700;font-size:13.5px;color:#0D47A1}
+.form-row input,.form-row select,.form-row textarea{padding:11px 14px;border:2px solid #e0e6ed;border-radius:10px;font-family:inherit;font-size:14px;width:100%;box-sizing:border-box;direction:rtl;text-align:right}
+.form-row input:focus,.form-row select:focus,.form-row textarea:focus{outline:none;border-color:#1565C0}
+.form-row textarea{resize:vertical;min-height:100px}
+.form-2col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.media-item,.quiz-item{border:1.5px solid #e0e6ed;border-radius:12px;padding:14px;margin-bottom:10px;background:#f8fafc}
+.media-item input,.media-item select,.quiz-item input,.quiz-item select,.quiz-item textarea{width:100%;padding:8px 10px;border:1px solid #e0e6ed;border-radius:8px;margin-bottom:8px;font-family:inherit;font-size:13.5px;box-sizing:border-box;direction:rtl;text-align:right}
+.btn-remove{background:#C62828;color:#fff;border:none;padding:5px 12px;border-radius:8px;font-size:12px;cursor:pointer;font-weight:700}
+.btn-mini{background:#1565C0;color:#fff;border:none;padding:9px 18px;border-radius:10px;font-size:13.5px;cursor:pointer;font-weight:700;margin-top:6px}
+.btn-save{background:#2E7D32;color:#fff;border:none;padding:12px 24px;border-radius:10px;font-size:15px;cursor:pointer;font-weight:700;flex:1}
+.empty-state{text-align:center;padding:60px 20px;color:#607085}
+.btn-nav{background:#fff;color:#0D47A1;padding:10px 18px;border-radius:12px;font-weight:700;font-size:14px;border:2px solid #e0e6ed;cursor:pointer;margin-left:6px}
+@media(max-width:900px){.admin-grid{grid-template-columns:1fr}.form-2col{grid-template-columns:1fr}}
+</style>
+</head>
+<body style="font-family:'Cairo',sans-serif;background:#eef2f7;margin:0;direction:rtl">
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a href="index.html" class="back-btn">←</a>
+      <div>
+        <h1>⚙️ لوحة إدارة الدروس</h1>
+        <p>إنشاء وتعديل الدروس</p>
+      </div>
+    </div>
+    <nav>
+      <button class="btn-nav" onclick="exportLessons()">⬇️ تصدير JSON</button>
+      <label class="btn-nav" style="cursor:pointer">
+        ⬆️ استيراد
+        <input type="file" id="importFile" accept=".json" style="display:none">
+      </label>
+    </nav>
+  </div>
+</header>
+
+<div class="admin-container">
+  <div class="admin-grid">
+    <aside class="admin-panel">
+      <h3>📚 الدروس</h3>
+      <button class="btn-mini" style="width:100%;margin-bottom:12px" onclick="newLesson()">➕ درس جديد</button>
+      <ul id="lessonList" class="lesson-list"></ul>
+    </aside>
+
+    <section class="admin-panel">
+      <div id="editorEmpty" class="empty-state">
+        <p style="font-size:60px;margin-bottom:10px">📝</p>
+        <p>اختر درساً من القائمة أو أنشئ درساً جديداً</p>
+      </div>
+
+      <form id="lessonForm" style="display:none" onsubmit="saveLesson(event)">
+        <h3>📋 معلومات أساسية</h3>
+        <div class="form-2col">
+          <div class="form-row">
+            <label>عنوان الدرس *</label>
+            <input type="text" id="f-title" required placeholder="مثال: آليات النمو والتجديد الخلوي">
+          </div>
+          <div class="form-row">
+            <label>المستوى *</label>
+            <select id="f-level" required>
+              <option value="1AS">1AS – جذع مشترك علوم وتكنولوجيا</option>
+              <option value="2AS">2AS – علوم تجريبية + رياضيات</option>
+              <option value="2AS-L">2AS – آداب وفلسفة</option>
+              <option value="3AS">3AS – علوم تجريبية</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-2col">
+          <div class="form-row">
+            <label>المجال التعليمي</label>
+            <input type="text" id="f-domain" placeholder="مثال: تحويل الطاقة واستعمال المادة">
+          </div>
+          <div class="form-row">
+            <label>رقم الدرس في الفهرس</label>
+            <input type="number" id="f-order" min="1" max="99" value="1">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>وصف قصير</label>
+          <input type="text" id="f-desc">
+        </div>
+
+        <h3 style="margin-top:20px">📘 المعارف (HTML مدعوم)</h3>
+        <div class="form-row">
+          <textarea id="f-knowledge" rows="12" placeholder="<h3>عنوان</h3><p>نص...</p>"></textarea>
+        </div>
+
+        <h3 style="margin-top:20px">🎬 الوثائق</h3>
+        <div id="mediaList"></div>
+        <button type="button" class="btn-mini" onclick="addMediaItem()">➕ إضافة وثيقة</button>
+
+        <h3 style="margin-top:20px">📝 أسئلة التقويم</h3>
+        <div id="quizList"></div>
+        <button type="button" class="btn-mini" onclick="addQuizQuestion()">➕ إضافة سؤال</button>
+
+        <div style="display:flex;gap:12px;margin-top:26px;padding-top:20px;border-top:2px solid #e0e6ed">
+          <button type="submit" class="btn-save">💾 حفظ الدرس</button>
+          <button type="button" class="btn-remove" style="padding:12px 20px" onclick="deleteCurrentLesson()">🗑️ حذف</button>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+<script>initAdmin();</script>
+</body>
+</html>
